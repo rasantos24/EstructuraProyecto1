@@ -20,6 +20,15 @@ public:
     explicit Tamagotchi(QWidget *parent = 0);
     ~Tamagotchi();
 
+private slots:
+    void on_ComerB_clicked();
+
+    void on_DormirB_clicked();
+
+    void on_HigieneB_clicked();
+
+    void on_SaludB_clicked();
+
 private:
     Ui::Tamagotchi *ui;
 

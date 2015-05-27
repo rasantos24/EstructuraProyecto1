@@ -31,6 +31,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Tamagotchi
 {
 public:
+    QAction *actionKim;
     QWidget *centralWidget;
     QPushButton *ComerB;
     QPushButton *DormirB;
@@ -59,6 +60,8 @@ public:
         if (Tamagotchi->objectName().isEmpty())
             Tamagotchi->setObjectName(QStringLiteral("Tamagotchi"));
         Tamagotchi->resize(468, 485);
+        actionKim = new QAction(Tamagotchi);
+        actionKim->setObjectName(QStringLiteral("actionKim"));
         centralWidget = new QWidget(Tamagotchi);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         ComerB = new QPushButton(centralWidget);
@@ -76,22 +79,22 @@ public:
         BarraComida = new QProgressBar(centralWidget);
         BarraComida->setObjectName(QStringLiteral("BarraComida"));
         BarraComida->setGeometry(QRect(320, 180, 118, 23));
-        BarraComida->setValue(24);
+        BarraComida->setValue(100);
         BarraComida->setTextVisible(false);
         BarraDormir = new QProgressBar(centralWidget);
         BarraDormir->setObjectName(QStringLiteral("BarraDormir"));
         BarraDormir->setGeometry(QRect(320, 240, 118, 23));
-        BarraDormir->setValue(24);
+        BarraDormir->setValue(100);
         BarraDormir->setTextVisible(false);
         BarraHigiene = new QProgressBar(centralWidget);
         BarraHigiene->setObjectName(QStringLiteral("BarraHigiene"));
         BarraHigiene->setGeometry(QRect(320, 300, 118, 23));
-        BarraHigiene->setValue(24);
+        BarraHigiene->setValue(100);
         BarraHigiene->setTextVisible(false);
         BarraSalud = new QProgressBar(centralWidget);
         BarraSalud->setObjectName(QStringLiteral("BarraSalud"));
         BarraSalud->setGeometry(QRect(320, 360, 118, 23));
-        BarraSalud->setValue(24);
+        BarraSalud->setValue(100);
         BarraSalud->setTextVisible(false);
         Figura = new QGraphicsView(centralWidget);
         Figura->setObjectName(QStringLiteral("Figura"));
@@ -99,11 +102,11 @@ public:
         BarraVida = new QProgressBar(centralWidget);
         BarraVida->setObjectName(QStringLiteral("BarraVida"));
         BarraVida->setGeometry(QRect(50, 130, 391, 23));
-        BarraVida->setValue(24);
+        BarraVida->setValue(100);
         BarraVida->setTextVisible(false);
         Vida = new QLabel(centralWidget);
         Vida->setObjectName(QStringLiteral("Vida"));
-        Vida->setGeometry(QRect(10, 130, 31, 16));
+        Vida->setGeometry(QRect(20, 130, 31, 16));
         CrearTamagotchi = new QPushButton(centralWidget);
         CrearTamagotchi->setObjectName(QStringLiteral("CrearTamagotchi"));
         CrearTamagotchi->setGeometry(QRect(190, 50, 111, 23));
@@ -145,6 +148,7 @@ public:
     void retranslateUi(QMainWindow *Tamagotchi)
     {
         Tamagotchi->setWindowTitle(QApplication::translate("Tamagotchi", "Tamagotchi", 0));
+        actionKim->setText(QApplication::translate("Tamagotchi", "kim", 0));
         ComerB->setText(QApplication::translate("Tamagotchi", "Comer", 0));
         DormirB->setText(QApplication::translate("Tamagotchi", "Dormir", 0));
         HigieneB->setText(QApplication::translate("Tamagotchi", "Higiene", 0));
