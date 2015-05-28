@@ -25,7 +25,8 @@ class Tamagotchi : public QMainWindow
 public:
     explicit Tamagotchi(QWidget *parent = 0);
     ~Tamagotchi();
-    QTimer* time;
+    QTimer* miTime;
+    QTimer* otroTime;
 
 private slots:
     void on_ComerB_clicked();
@@ -35,6 +36,20 @@ private slots:
     void on_HigieneB_clicked();
 
     void on_SaludB_clicked();
+
+    void actualizar();
+
+    void pierdeVida();
+
+    void bajarVida();
+
+    void Reloj();
+
+    int buscar(QString name);
+
+    QString getNombre();
+
+    void valores(QString name);
 
 private:
     Ui::Tamagotchi *ui;
