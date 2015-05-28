@@ -6,24 +6,19 @@ Tamagotchi::Tamagotchi(QWidget *parent) :
     ui(new Ui::Tamagotchi)
 {
     ui->setupUi(this);
+
+    desechos = new  MisPilas;
+    enfermedades = new MisPilas;
+    hambre = new MisPilas;
+    sueno = new MisPilas;
+
+    time = new QTimer(this);
+    connect(time, SIGNAL(timeout()), this, SLOT(refrescar_barras()));
 }
 
 Tamagotchi::~Tamagotchi()
 {
     delete ui;
-
-/*    QGraphicsView* visor = new QGraphicsView();
-    QGraphicsScene* escena = new QGraphicsScene();
-
-    QImage* img = new QImage();
-    img->load("cosa.jpg");
-    visor->scene()->addPixmap(QPixmap::fromImage(*img));
-
-    visor->setScene(escena);
-    visor->scene()->addLine(50,50,80,80);
-*/
-
-
 }
 
 void Tamagotchi::on_ComerB_clicked()

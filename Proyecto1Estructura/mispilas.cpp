@@ -23,7 +23,7 @@ bool MisPilas::sacar()
 }
 void MisPilas::meter(NodoT* cosa)
 {
-    if(tm<=5)
+    if(tm <= 5)
     {
         if(primero)
             cosa->anterior = primero;

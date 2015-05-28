@@ -11,7 +11,7 @@ public:
     NodoT* primero = NULL;
     NodoT* getPrimero();
     bool sacar();
-    void meter(NodoT*obj);
+    void meter(NodoT* cosa);
     bool vaciar();
     void quitar();
     int tm = 1;

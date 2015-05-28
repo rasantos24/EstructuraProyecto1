@@ -16,11 +16,15 @@ SOURCES += main.cpp\
         tamagotchi.cpp \
     nodot.cpp \
     mispilas.cpp \
-    miscolas.cpp
+    miscolas.cpp \
+    mtamagotchi.cpp \
+    migranja.cpp
 
 HEADERS  += tamagotchi.h \
     nodot.h \
     mispilas.h \
-    miscolas.h
+    miscolas.h \
+    mtamagotchi.h \
+    migranja.h
 
 FORMS    += tamagotchi.ui
